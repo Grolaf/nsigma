@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include nsigma *.css
+recursive-include nsigma *.csv
+recursive-include nsigma *.html
+recursive-include nsigma *.ico
+recursive-include nsigma *.js
+recursive-include nsigma *.json
+recursive-include nsigma *.md
+recursive-include nsigma *.png
+recursive-include nsigma *.py
+recursive-include nsigma *.svg
+recursive-include nsigma *.txt
+recursive-exclude nsigma *.pyc
