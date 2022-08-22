@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Chiffrage {nom_etude} [BC{numero_bc}",
+ "creation": "2022-08-19 02:37:00.629936",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_infos_generales",
+  "ref_etude",
+  "nom_etude",
+  "numero_bc",
+  "section_phases_bc",
+  "phases",
+  "section_chiffrage",
+  "rendu",
+  "technologie_conseillee",
+  "commentaire_general",
+  "color_11",
+  "chiffrage_ht",
+  "chiffrage_ttc",
+  "duree_en_semaine"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_infos_generales",
+   "fieldtype": "Section Break",
+   "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "ref_etude",
+   "fieldtype": "Link",
+   "label": "Etude",
+   "options": "Etude"
+  },
+  {
+   "fetch_from": "ref_etude.nom_etude",
+   "fieldname": "nom_etude",
+   "fieldtype": "Data",
+   "label": "Nom de l'\u00e9tude"
+  },
+  {
+   "fieldname": "numero_bc",
+   "fieldtype": "Int",
+   "label": "Num\u00e9ro du BC"
+  },
+  {
+   "fieldname": "section_phases_bc",
+   "fieldtype": "Section Break",
+   "label": "Phases du BC"
+  },
+  {
+   "fieldname": "phases",
+   "fieldtype": "Table",
+   "label": "Phases",
+   "options": "Phases Bon de Commande Items"
+  },
+  {
+   "fieldname": "section_chiffrage",
+   "fieldtype": "Section Break",
+   "label": "Chiffrage"
+  },
+  {
+   "fieldname": "rendu",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Rendu",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technologie_conseillee",
+   "fieldtype": "Small Text",
+   "label": "Technologie conseill\u00e9e"
+  },
+  {
+   "fieldname": "commentaire_general",
+   "fieldtype": "Small Text",
+   "label": "Commentaire g\u00e9n\u00e9ral"
+  },
+  {
+   "fieldname": "color_11",
+   "fieldtype": "Color"
+  },
+  {
+   "fieldname": "chiffrage_ht",
+   "fieldtype": "Currency",
+   "label": "Chiffrage H.T.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chiffrage_ttc",
+   "fieldtype": "Currency",
+   "label": "Chiffrage T.T.C",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duree_en_semaine",
+   "fieldtype": "Int",
+   "label": "Dur\u00e9e en semaine",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-19 02:37:00.629936",
+ "modified_by": "Administrator",
+ "module": "P\u00f4le Technique",
+ "name": "Chiffrage Bon de Commande",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

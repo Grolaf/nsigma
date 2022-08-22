@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-08-19 02:25:21.822743",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "phase",
+  "description",
+  "commentaire",
+  "duree_en_semaine",
+  "nombre_de_jeh",
+  "prix_du_jeh",
+  "prix_total_ht"
+ ],
+ "fields": [
+  {
+   "fieldname": "phase",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phase",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commentaire",
+   "fieldtype": "Text",
+   "label": "Commentaire"
+  },
+  {
+   "fieldname": "duree_en_semaine",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Dur\u00e9e en semaine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nombre_de_jeh",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nombre de JEH",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prix_du_jeh",
+   "fieldtype": "Currency",
+   "label": "Prix du JEH",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prix_total_ht",
+   "fieldtype": "Currency",
+   "label": "Prix total H.T.",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-19 02:25:21.822743",
+ "modified_by": "Administrator",
+ "module": "P\u00f4le Commercial",
+ "name": "Phases Bon de Commande Items",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

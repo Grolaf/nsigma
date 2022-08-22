@@ -1,26 +1,40 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2022-08-10 15:37:41.328385",
+ "autoname": "field:libelle_fonction",
+ "creation": "2022-08-19 01:28:58.970210",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tt"
+  "libelle_fonction",
+  "pole"
  ],
  "fields": [
   {
-   "fieldname": "tt",
+   "fieldname": "libelle_fonction",
    "fieldtype": "Data",
-   "label": "tt"
+   "in_list_view": 1,
+   "label": "Libell\u00e9 de la fonction",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "pole",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "P\u00f4le",
+   "options": "Pole",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-10 15:37:41.328385",
+ "modified": "2022-08-19 01:28:58.970210",
  "modified_by": "Administrator",
- "module": "P\u00f4le Commercial",
- "name": "test",
+ "module": "Ressources Humaines",
+ "name": "Fonction",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -36,6 +50,7 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

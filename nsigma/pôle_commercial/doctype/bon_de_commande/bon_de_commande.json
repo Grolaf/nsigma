@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nom_bc",
+ "creation": "2022-08-19 02:32:03.878997",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "numero",
+  "column_break_2",
+  "nom_bc",
+  "ref_etude",
+  "ref_complete_etude",
+  "section_phases_bc",
+  "phases",
+  "section_chiffrage",
+  "rendu",
+  "technologie_conseillee",
+  "commentaire_general",
+  "column_break_12",
+  "frais_dossier",
+  "chiffrage_ht",
+  "chiffrage_ttc",
+  "total_ht",
+  "total_ttc",
+  "duree_en_semaine"
+ ],
+ "fields": [
+  {
+   "fieldname": "numero",
+   "fieldtype": "Int",
+   "label": "Num\u00e9ro",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nom_bc",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Nom du BC",
+   "unique": 1
+  },
+  {
+   "fieldname": "ref_etude",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Etude",
+   "options": "Etude",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ref_etude.ref_complete",
+   "fieldname": "ref_complete_etude",
+   "fieldtype": "Data",
+   "label": "R\u00e9f\u00e9rence Compl\u00e8te de l'\u00e9tude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_phases_bc",
+   "fieldtype": "Section Break",
+   "label": "Phases du BC"
+  },
+  {
+   "fieldname": "phases",
+   "fieldtype": "Table",
+   "label": "Phases",
+   "options": "Phases Bon de Commande Items"
+  },
+  {
+   "fieldname": "section_chiffrage",
+   "fieldtype": "Section Break",
+   "label": "Chiffrage"
+  },
+  {
+   "fieldname": "rendu",
+   "fieldtype": "Small Text",
+   "label": "Rendu"
+  },
+  {
+   "fieldname": "technologie_conseillee",
+   "fieldtype": "Small Text",
+   "label": "Technologie Conseill\u00e9e"
+  },
+  {
+   "fieldname": "commentaire_general",
+   "fieldtype": "Small Text",
+   "label": "Commentaire g\u00e9n\u00e9ral"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frais_dossier",
+   "fieldtype": "Currency",
+   "label": "Frais de dossier"
+  },
+  {
+   "fieldname": "chiffrage_ht",
+   "fieldtype": "Currency",
+   "label": "Chiffrage H.T.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chiffrage_ttc",
+   "fieldtype": "Currency",
+   "label": "Chiffrage T.T.C",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ht",
+   "fieldtype": "Currency",
+   "label": "Total H.T.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ttc",
+   "fieldtype": "Currency",
+   "label": "Total T.T.C",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duree_en_semaine",
+   "fieldtype": "Int",
+   "label": "Dur\u00e9e en semaine",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-19 02:32:03.878997",
+ "modified_by": "Administrator",
+ "module": "P\u00f4le Commercial",
+ "name": "Bon de Commande",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

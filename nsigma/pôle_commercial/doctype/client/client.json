@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-19 01:44:28.692306",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "infos_generales",
+  "type",
+  "nom_societe",
+  "interlocuteur",
+  "column_break_5",
+  "adresse",
+  "logo",
+  "nombre_etudes_client"
+ ],
+ "fields": [
+  {
+   "fieldname": "infos_generales",
+   "fieldtype": "Section Break",
+   "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Particulier\nStartup\nTPE/PME\nGrand groupe",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nom_societe",
+   "fieldtype": "Data",
+   "label": "Nom de la soci\u00e9t\u00e9",
+   "mandatory_depends_on": "[\"Startup\", \"TPM/PME\",\"Grand groupe\"].indexOf(type) != -1;"
+  },
+  {
+   "fieldname": "interlocuteur",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Interlocuteur",
+   "options": "Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adresse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Adresse",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "nombre_etudes_client",
+   "fieldtype": "Int",
+   "label": "Nombre d'\u00e9tudes avec ce Client",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-19 02:10:26.865796",
+ "modified_by": "Administrator",
+ "module": "P\u00f4le Commercial",
+ "name": "Client",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nom_etude",
+ "creation": "2022-08-19 01:55:41.881687",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "infos_generales",
+  "nom_etude",
+  "client",
+  "interlocuteur",
+  "date_debut",
+  "ref_etude",
+  "ref_complete",
+  "column_break_8",
+  "chaff_etude",
+  "ct_etude",
+  "quali_etude",
+  "section_chiffrage",
+  "chiffrage_ht",
+  "chiffrage_ttc",
+  "duree_en_semaine",
+  "column_break_16",
+  "total_ht",
+  "total_ttc",
+  "commentaires",
+  "section_documents",
+  "contexte_etude",
+  "enjeu_client",
+  "solution"
+ ],
+ "fields": [
+  {
+   "fieldname": "infos_generales",
+   "fieldtype": "Section Break",
+   "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "nom_etude",
+   "fieldtype": "Data",
+   "label": "Nom de l'\u00e9tude",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Client",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "client.interlocuteur",
+   "fieldname": "interlocuteur",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Interlocuteur",
+   "options": "Contact",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "ref_etude",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "R\u00e9f\u00e9rence de l'\u00e9tude",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ref_complete",
+   "fieldtype": "Data",
+   "label": "R\u00e9f\u00e9rence compl\u00e8te",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chaff_etude",
+   "fieldtype": "Link",
+   "label": "Charg\u00e9 d'affaires",
+   "options": "Membre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ct_etude",
+   "fieldtype": "Link",
+   "label": "Conseiller Techique",
+   "options": "Membre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quali_etude",
+   "fieldtype": "Link",
+   "label": "Charg\u00e9 de qualit\u00e9",
+   "options": "Membre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_chiffrage",
+   "fieldtype": "Section Break",
+   "label": "Chiffrage"
+  },
+  {
+   "fieldname": "chiffrage_ht",
+   "fieldtype": "Currency",
+   "label": "Chiffrage H.T. sans frais de dossier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chiffrage_ttc",
+   "fieldtype": "Currency",
+   "label": "Chiffrage T.T.C. sans frais de dossier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duree_en_semaine",
+   "fieldtype": "Data",
+   "label": "Dur\u00e9e en semaine",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_ht",
+   "fieldtype": "Currency",
+   "label": "Total H.T. avec frais de dossier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ttc",
+   "fieldtype": "Currency",
+   "label": "Total T.T.C. avec frais de dossier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Small Text",
+   "label": "Commentaires"
+  },
+  {
+   "fieldname": "section_documents",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "contexte_etude",
+   "fieldtype": "Small Text",
+   "label": "Description du contexte"
+  },
+  {
+   "fieldname": "enjeu_client",
+   "fieldtype": "Small Text",
+   "label": "Description de l'enjeu Client"
+  },
+  {
+   "fieldname": "solution",
+   "fieldtype": "Small Text",
+   "label": "Solution propos\u00e9e"
+  },
+  {
+   "fieldname": "date_debut",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date de d\u00e9but de l'\u00e9tude",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-19 02:19:47.294639",
+ "modified_by": "Administrator",
+ "module": "P\u00f4le Commercial",
+ "name": "Etude",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

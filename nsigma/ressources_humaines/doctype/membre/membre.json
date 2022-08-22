@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{prenom} {nom}",
+ "creation": "2022-08-19 01:35:13.243435",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "infos_generales",
+  "utilisateur",
+  "prenom",
+  "nom",
+  "genre",
+  "column_break_6",
+  "photo",
+  "date_de_naissance",
+  "fonction",
+  "pole"
+ ],
+ "fields": [
+  {
+   "fieldname": "infos_generales",
+   "fieldtype": "Section Break",
+   "label": "Informations g\u00e9n\u00e9rales"
+  },
+  {
+   "fieldname": "utilisateur",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Identifiants utilisateur",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "utilisateur.first_name",
+   "fieldname": "prenom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pr\u00e9nom",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "utilisateur.last_name",
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "utilisateur.gender",
+   "fieldname": "genre",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Genre",
+   "options": "Gender",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach",
+   "label": "Photo"
+  },
+  {
+   "fetch_from": "utilisateur.birth_date",
+   "fieldname": "date_de_naissance",
+   "fieldtype": "Datetime",
+   "label": "Date de naissance",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "fonction",
+   "fieldtype": "Link",
+   "label": "Fonction",
+   "options": "Fonction",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "fonction.pole",
+   "fieldname": "pole",
+   "fieldtype": "Link",
+   "label": "P\u00f4le",
+   "options": "Pole",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-19 01:38:15.554332",
+ "modified_by": "Administrator",
+ "module": "Ressources Humaines",
+ "name": "Membre",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
